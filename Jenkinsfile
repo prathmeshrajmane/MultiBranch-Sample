@@ -1,6 +1,6 @@
 pipeline{
-       stages("Running a script"){
-        stage{
+       stages{
+        stage("Running a script"){
           steps{
                 sh sample.sh
                 }

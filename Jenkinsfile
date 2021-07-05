@@ -1,9 +1,11 @@
-pipeline{
-agent {
+pipeline {
+
+    agent {
         node {
             label 'feature'
         }
-    }       stages{
+    }
+        stages{
         stage("Running a script"){
           steps{
                 sh sample.sh

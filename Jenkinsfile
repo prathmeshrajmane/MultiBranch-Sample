@@ -1,14 +1,12 @@
 pipeline {
-
        agent any
         stages{
-        stage("Running a script"){
+         stage("Timezone Script"){
           steps{
-                         script {
-
-                sh './simple.sh'
+                script {
+                 sh './zone.sh'
                 }
-          }
               }
-            }
-        }
+           }
+       }
+}

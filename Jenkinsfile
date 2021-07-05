@@ -15,5 +15,14 @@ pipeline {
 		   sh 'docker rm -f simple-nginx1'
                    }
                 }
+	       
+	       stage("deploy"){
+	    when {
+	         branch 'feature'
+		 }
+		steps {
+		  sh sample.sh
+		      }
+		 }
        }    
 }

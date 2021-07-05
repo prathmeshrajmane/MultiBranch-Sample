@@ -9,9 +9,9 @@ pipeline {
  
             stage("Build"){
             steps {
-                   docker build -t simple-nginx .
+                   sh 'docker build -t simple-nginx .'
                    echo "Build completed"
-		   docker run -d -it -p 8080:80 simple-nginx
+		   sh 'docker run -d -it -p 8080:80 simple-nginx'
                    docker ps -a
                    }
                 }

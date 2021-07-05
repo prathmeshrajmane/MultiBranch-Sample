@@ -10,9 +10,9 @@ pipeline {
             steps {
                    sh 'docker build -t simple-nginx1 .'
                    echo "Build completed"
-		   sh 'docker run -d -it -p 1234:80 simple-nginx1'
+		   		   sh 'docker rm -f engine'
+		   sh 'docker run -d -it -p 1234:80 --name simple-nginx1 engine'
                    sh 'docker ps '
-		   sh 'docker rm -f simple-nginx1'
                    }
                 }
 	       

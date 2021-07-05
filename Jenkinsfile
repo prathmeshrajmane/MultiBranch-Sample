@@ -4,7 +4,7 @@ pipeline {
          stage("Timezone Script"){
           steps{
                 script {
-                 sh './zone.sh'
+                 sh './timezone.sh'
                 }
               }
            }

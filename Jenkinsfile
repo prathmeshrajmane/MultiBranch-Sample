@@ -5,9 +5,8 @@ pipeline {
             label 'master'
         }
     }
-	 
- 
-            stage("Build"){
+       stages {
+	stage("Build"){
             steps {
                    sh 'docker build -t simple-nginx .'
                    echo "Build completed"
@@ -15,12 +14,5 @@ pipeline {
                    docker ps -a
                    }
                 }
-	    stage("deploy"){
-	    when {
-	         branch 'feature'
-		 }
-		steps {
-		  sh sample.sh
-		      }
-		 }
+       }    
 }

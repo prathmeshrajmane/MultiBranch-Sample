@@ -11,7 +11,7 @@ pipeline {
                    sh 'docker build -t simple-nginx .'
                    echo "Build completed"
 		   sh 'docker run -d -it -p 8080:80 simple-nginx'
-                   docker ps -a
+                   sh 'docker ps -a'
                    }
                 }
        }    

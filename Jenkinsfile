@@ -1,10 +1,6 @@
 pipeline {
 
-    agent {
-        node {
-            label 'feature'
-        }
-    }
+       agent any
         stages{
         stage("Running a script"){
           steps{

@@ -18,7 +18,7 @@ pipeline {
 	       
 	       stage("deploy"){
 	    	when {
-	         branch 'feature'
+		expression { env.gitlabBranch == 'feature' }
 		 }
 		steps {
 		  sh sample.sh

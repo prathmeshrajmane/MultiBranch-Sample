@@ -11,7 +11,7 @@ pipeline {
                    sh 'docker build -t simple-nginx1 .'
                    echo "Build completed"
 		   		   sh 'docker rm -f engine'
-		   sh 'docker run -d -it -p 1234:80 --name simple-nginx1 engine'
+		   sh 'docker run -d -it -p 1234:80 --name engine simple-nginx1'
                    sh 'docker ps '
                    }
                 }
